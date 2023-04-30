@@ -82,27 +82,54 @@
                 <a routerLink="/contactUs" class="nav-item nav-link" routerLinkActive="active">Contact</a>
                 <a routerLink="/aboutUs" class="nav-item nav-link"routerLinkActive="active">About</a>
   
-                <div class="nav-item dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                  >
-                    Category
-                    <i class="fa fa-angle-down mt-1"></i>
-                  </a>
-                  <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                    <a routerLink="/address/newAddress" routerLinkActive="active" class="dropdown-item"
-                      >Add New shipping Address
-                    </a>
-                    <a routerLink="/address/savedAddresses" routerLinkActive="active" class="dropdown-item"
-                      >Saved Shipping 
-                    </a>
-                  </div>
-                </div>
+                
+                <div class="drop">
+               
+                  <label for="btn-category" class="button" id="category">Category
+                   <span class="fas fa-caret-down"></span>
+                  </label>
+                  <input type="checkbox" id="btn-category">
+                  <ul class="menu">
+                     
+                      <li>
+                          <label for="btn-electronics" class="first"> Electronics
+                              <span class="fas fa-caret-down"></span>
+                          </label>
+                          <input type="checkbox" id="btn-electronics">
+                          <ul>
+                              <li><a routerLink="/mobile">Mobiles</a></li>
+                              <li><a routerLink="/computer">Computers</a></li>
+                              <li><a routerLink="/tv">Tv</a></li>
+                          </ul>
+                      </li>
+              
+                      <li>
+                          <label for="btn-fashion" class="second"> Fashion
+                              <span class="fas fa-caret-down"></span>
+                          </label>
+                          <input type="checkbox" id="btn-fashion">
+                          <ul>
+                              <li><a routerLink="/clothing">Clothes</a></li>
+                           
+                          </ul>
+                      </li>
+              
+                      <li><a routerLink="/book">Books</a></li>
+                      
+                  </ul>
+                   
+         
+              
+               
+              </div>
+
+                
   
                 <a routerLink="/profile" class="nav-item nav-link" routerLinkActive="active">Profile</a>
               </div>
+
+
+
   
               <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
                 <a routerLink="/wishing-list" class="btn px-0 mr-3">
@@ -233,6 +260,8 @@
                 <a routerLink="/profile" class="nav-item nav-link">Profile</a>
          
               </div>
+
+             
   
               <div class="navbar-nav ml-auto py-0 d-none d-lg-block d-flex justify-content-center align-items-center">
                 <a routerLink="/wishing-list" class="btn px-0 mr-3">
