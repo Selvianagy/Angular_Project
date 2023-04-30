@@ -9,11 +9,26 @@ import { SharedModule } from './shared/shared.module';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginModule } from './login/login.module';
+import { RegisterModule } from './register/register.module';
+import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
+
+
+
+import { CommonModule } from '@angular/common';
+import { HomeModule } from './home/home.module';
+import { ProductsModule } from './products/products.module';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     MainComponent,
     AboutUsComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -21,6 +36,24 @@ import { AboutUsComponent } from './about-us/about-us.component';
     FormsModule,
     HttpClientModule,
     SharedModule,
+
+    ReactiveFormsModule,
+    RegisterModule,
+    LoginModule,
+    ShoppingCartModule,
+
+
+    ReactiveFormsModule,
+    RegisterModule,
+    LoginModule,
+    ShoppingCartModule,
+    HomeModule,
+
+    CommonModule,
+    HomeModule,
+    ProductsModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
