@@ -6,9 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent {
-  public fruits:string [];
- constructor (){
-   this.fruits=["apple","ldmsd","kjfbse"];
-  }
 
 }

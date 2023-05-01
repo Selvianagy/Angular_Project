@@ -1,11 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
-import { ILogin } from '../_models/login';
-import { IToken } from '../_models/Token';
-import { Observable} from 'rxjs';
-import { IRegister } from '../_models/register';
-
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +9,7 @@ export class AuthService {
 
   public user: any = null;
   httpOptions: any;
-  baseurl = 'http://localhost:5244/api/Account';
+  baseurl = 'https://ecommerce-api-6p26.onrender.com/api/v1/auth';
 
   constructor(private httpClient: HttpClient, private router: Router) {
     this.httpOptions = {
@@ -22,8 +17,8 @@ export class AuthService {
     }
   }
 
-  login(body: ILogin){
-    return this.httpClient.post<IToken>(`${this.baseurl}/login`, body, this.httpOptions);
+  login(body: any) {
+    return this.httpClient.post(`${this.baseurl}/login`, body, this.httpOptions);
   }
 
   setupUserProfile() {
@@ -61,14 +56,10 @@ export class AuthService {
 
 
   register(user:any){
-    return this.httpClient.post(`${this.baseurl}/register`, user);
+    return this.httpClient.post(`${this.baseurl}/signup`, user);
 
   }
 
-  registerVendor(vendor:any){
-    return this.httpClient.post(`${this.baseurl}/vendorRegister`, vendor);
-
-  }
   get isUserLogged(): boolean
   {
     return  (localStorage.getItem('token'))? true: false

@@ -31,14 +31,10 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              
               "src/styles.scss"
-             
 
             ],
-            "scripts": [
-             
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -107,8 +103,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "7242cfad-2ed6-49e7-a17d-8861a1587b7e"
   }
 }

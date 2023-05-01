@@ -14,18 +14,21 @@ import { AuthGuard } from './Gaurds/auth.guard';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { ContactUsComponent } from './shared/contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+<<<<<<< HEAD
 import { VendorRegisterComponent } from './register/vendor-register/vendor-register.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart/shopping-cart.component';
+=======
+>>>>>>> parent of 61a3bea ( Mobile,Tv and book filteration)
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterComponent},
-  {path: 'vendorregister', component: VendorRegisterComponent},
+
   { path: '', component: MainComponent,
     children: [
       { path: '', component: MyHomeComponent },
       { path: 'products', component: ProductListComponent },
-      { path: 'shoppingcart', component: ShoppingCartComponent,canActivate:[AuthGuard] },
+      { path: 'cart', component: CartComponent,canActivate:[AuthGuard] },
       { path: 'checkout', component: CheckoutComponent ,canActivate:[AuthGuard]},
       { path: 'wishing-list', component: WishlistComponent ,canActivate:[AuthGuard]},
       {path:'product-details/',component:ProductDetailsComponent},
