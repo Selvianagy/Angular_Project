@@ -14,11 +14,6 @@ import { AuthGuard } from './Gaurds/auth.guard';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { ContactUsComponent } from './shared/contact-us/contact-us.component';
 import { AboutUsComponent } from './about-us/about-us.component';
-<<<<<<< HEAD
-import { VendorRegisterComponent } from './register/vendor-register/vendor-register.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart/shopping-cart.component';
-=======
->>>>>>> parent of 61a3bea ( Mobile,Tv and book filteration)
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
